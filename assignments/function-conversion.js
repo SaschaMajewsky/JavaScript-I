@@ -59,7 +59,7 @@ subtract(1,2);
 
 // Stretch
 
-/* exampleArray = [1,2,3,4]; */
+exampleArray = [1,2,3,4];
 // const triple = exampleArray.map(function (num) {
 //   return num * 3;
 // });
@@ -70,6 +70,12 @@ subtract(1,2);
  */
 
  /* There is some explanation missing here for me to fully understand what the requirements are. Is handling arrays required? */
-let triple = (num) => num * 3;    
+let triple = (arry) => {
+    tripleArry = [];
+    for (let i = 0; i < arry.length; i++) {
+    tripleArry.push(arry[i] * 3);
+    }
+    return tripleArry;   
+}
 
-console.log(triple(2));
+console.log(triple(exampleArray));
