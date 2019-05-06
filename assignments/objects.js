@@ -97,6 +97,27 @@ console.log(internFive.multiplyNums(3,4));
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
+/*  Other solution
+function person (name, age) {
+  return {
+    name: name, 
+    age: age, 
+    speak: function () {
+      console.log(this.name)
+    }
+  };
+}
+
+const parent =  person("Susan", 70);
+parent.child =  person("Goerge", 50);
+parent.child.grandchild =  person("Sam", 30);
+
+parent.speak();
+parent.child.speak();
+parent.child.grandchild.speak();
+ */
+
+
 const parent = {
   name: "Susan",
   age: 70,
@@ -110,6 +131,7 @@ const parent = {
                       }
          }
 }
+
 
 // Log the parent object's name
 console.log(parent.name);
