@@ -114,3 +114,11 @@ for (let i = 0; i < inventory.length; i++) {
 
 let BMWAndAudi = inventory.filter((el) => el.car_make == "BMW" || el.car_make == "Audi");
 console.log(JSON.stringify(BMWAndAudi));
+
+
+// Count all cars that are not BMWs
+let bmwCars2 = inventory.reduce(function(total, obj){
+    return obj.car_make !== "BMW" ? total += 1 : total;
+}, 0)
+
+console.log(bmwCars2);
